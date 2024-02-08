@@ -47,14 +47,14 @@ public class RefText : IReference<string>
         if (!parser.TryParse(0, out Service) || Service == 0)
             return false;
 
-        var nameStrIndex = 1;
+        var nameStrIndex = 4;
         if (Game.ClientType >= GameClientType.Global)
-            nameStrIndex = 2;
+            nameStrIndex = 4;
 
         if (!parser.TryParse(nameStrIndex, out NameStrId))
             return false;
 
-        var languageTab = 8;
+        var languageTab = 4;
         var maxTabs = parser.GetColumnCount();
 
         //Try parse with the already set language tab
